@@ -30,6 +30,8 @@
 		94D946A727B9134700E46EB9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946A627B9134700E46EB9 /* TabBarViewController.swift */; };
 		94D946A927B9187D00E46EB9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946A827B9187D00E46EB9 /* List.swift */; };
 		94D946AB27B91A0200E46EB9 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946AA27B91A0200E46EB9 /* ColumnFlowLayout.swift */; };
+		94D946AD27B9243200E46EB9 /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946AC27B9243200E46EB9 /* NewListViewController.swift */; };
+		94D946B127B9271300E46EB9 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946B027B9271300E46EB9 /* Tab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		94D946A627B9134700E46EB9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		94D946A827B9187D00E46EB9 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		94D946AA27B91A0200E46EB9 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		94D946AC27B9243200E46EB9 /* NewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
+		94D946B027B9271300E46EB9 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +222,8 @@
 				94D9469F27B911E200E46EB9 /* Settings */,
 				94D946A227B9122500E46EB9 /* Lists */,
 				94D946A527B9130400E46EB9 /* Home */,
-				94D946A627B9134700E46EB9 /* TabBarViewController.swift */,
+				94D946AF27B9244400E46EB9 /* TabBar */,
+				94D946AE27B9243900E46EB9 /* NewList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +260,23 @@
 				94D946A327B9130100E46EB9 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		94D946AE27B9243900E46EB9 /* NewList */ = {
+			isa = PBXGroup;
+			children = (
+				94D946AC27B9243200E46EB9 /* NewListViewController.swift */,
+			);
+			path = NewList;
+			sourceTree = "<group>";
+		};
+		94D946AF27B9244400E46EB9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				94D946A627B9134700E46EB9 /* TabBarViewController.swift */,
+				94D946B027B9271300E46EB9 /* Tab.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +415,8 @@
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */,
 				94D946A927B9187D00E46EB9 /* List.swift in Sources */,
+				94D946AD27B9243200E46EB9 /* NewListViewController.swift in Sources */,
+				94D946B127B9271300E46EB9 /* Tab.swift in Sources */,
 				94D9469C27B9116200E46EB9 /* Setting.swift in Sources */,
 				94D9469727B90E7C00E46EB9 /* TasksViewController.swift in Sources */,
 				94D946A427B9130100E46EB9 /* HomeViewController.swift in Sources */,

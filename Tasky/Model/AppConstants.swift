@@ -30,8 +30,12 @@ struct AppConstants {
     // MARK: - ImageAssets
     
     struct ImageAssets {
+        static let plus = "plus"
+        static let plusCircle = "plus.circle"
         static let home = "house"
         static let homeFilled = "house.fill"
+        static let trash = "trash"
+        static let trashFilled = "trash.fill"
         static let favorite = "heart"
         static let favoriteFilled = "heart.fill"
         static let newspaper = "newspaper"

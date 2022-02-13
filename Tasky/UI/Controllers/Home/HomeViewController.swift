@@ -67,7 +67,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     static func getHomeVC() -> HomeViewController {
         let vc = HomeViewController()
-        let item = UITabBarItem(title: nil, image: Tab.home.image, selectedImage: Tab.home.selectedImage)
+        let item = UITabBarItem(title: Tab.home.text, image: Tab.home.image, selectedImage: Tab.home.selectedImage)
         vc.tabBarItem = item
         return vc
     }

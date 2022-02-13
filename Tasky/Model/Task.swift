@@ -14,11 +14,13 @@ struct Task: Codable {
     var title: String
     var description: String
     var dateCreated: Date
+    var parentListId: String
     
-    init(id: String, title: String, description: String) {
+    init(id: String, title: String, description: String, parentListId: String) {
         self.id = id
         self.title = title
         self.description = description
         self.dateCreated = Date()
+        self.parentListId = parentListId
     }
 }

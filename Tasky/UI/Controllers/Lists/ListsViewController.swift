@@ -67,7 +67,7 @@ class ListsViewController: UIViewController {
 extension ListsViewController {
     static func getListVC() -> ListsViewController {
         let vc = ListsViewController()
-        let item = UITabBarItem(title: nil, image: Tab.lists.image, selectedImage: Tab.lists.selectedImage)
+        let item = UITabBarItem(title: Tab.new.text, image: Tab.new.image, selectedImage: Tab.new.selectedImage)
         vc.tabBarItem = item
         return vc
     }
