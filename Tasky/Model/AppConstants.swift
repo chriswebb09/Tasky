@@ -7,7 +7,12 @@
 
 import UIKit
 
+// MARK: - AppConstants
+
 struct AppConstants {
+    
+    // MARK: - Storage
+    
     struct Storage {
         static let tasksPath = "tasks.json"
         static let firstRunKey = "firstruncomplete"
