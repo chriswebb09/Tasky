@@ -9,10 +9,6 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
-    enum Sections {
-        case favorites
-    }
-    
     var listDataSource: UICollectionViewDiffableDataSource<Section<AnyHashable, [AnyHashable]>, AnyHashable>?
     private var flowLayout = ColumnFlowLayout()
     var collectionView: UICollectionView!

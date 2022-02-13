@@ -9,18 +9,7 @@ import UIKit
 
 class ListsViewController: BaseViewController {
     
-    enum Sections {
-        case favorites
-        
-        var headerItem: String {
-            switch self {
-            case .favorites:
-                return "Test"
-            }
-        }
-    }
-    
-    private var listDataSource: UICollectionViewDiffableDataSource<Sections, List>!
+    var listDataSource: UICollectionViewDiffableDataSource<Section<AnyHashable, [AnyHashable]>, AnyHashable>?
     private var flowLayout = ColumnFlowLayout()
     
     var collectionView: UICollectionView!
@@ -36,10 +25,16 @@ class ListsViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var snapshot = NSDiffableDataSourceSnapshot<Sections, List>()
-        snapshot.appendSections([.favorites])
-        snapshot.appendItems(List.lists, toSection:.favorites)
-        listDataSource.apply(snapshot, animatingDifferences: true)
+        var sections: [Section<AnyHashable, [AnyHashable]>] = []
+        sections.append(Section(headerItem: FavoritesSection(media: List.lists),sectionItems: List.lists))
+        sections.append(Section(headerItem: CategoreySection(categories: List.list2), sectionItems: List.list2))
+        let payloadDatasource = DataSource(sections: sections)
+        var snapshot = NSDiffableDataSourceSnapshot<Section<AnyHashable, [AnyHashable]>, AnyHashable>()
+        payloadDatasource.sections.forEach {
+            snapshot.appendSections([$0])
+            snapshot.appendItems($0.sectionItems)
+        }
+        listDataSource?.apply(snapshot, animatingDifferences: true)
     }
     
     func configureCollectionView() {
@@ -53,11 +48,11 @@ class ListsViewController: BaseViewController {
             cell.layer.shadowOffset = CGSize(width: 1, height: 4.9)
             cell.layer.shadowRadius = 6
         }
-        listDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) {
-            collectionView, indexPath, identifier -> UICollectionViewCell in
-            let list = List.lists[indexPath.row]
-            return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: list)
-        }
+//        listDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) {
+//            collectionView, indexPath, identifier -> UICollectionViewCell in
+//            let list = List.lists[indexPath.row]
+//            return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: list)
+//        }
     }
     
     func configureSupplementaryView() {
