@@ -7,57 +7,6 @@
 
 import UIKit
 
-struct Section<T: Hashable, U: Hashable>: Hashable {
-    let headerItem: T
-    let sectionItems: U
-}
-
-struct DataSource<T: Hashable> {
-    let sections: [T]
-}
-
-class FavoritesSection: Hashable {
-    
-    var sectionTitle: String = "Popular Movies"
-    
-    var media: [List]?
-    
-    init(media: [List]) {
-        self.media = media
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(identifier)
-    }
-    
-    static func == (lhs: FavoritesSection, rhs: FavoritesSection) -> Bool {
-        return lhs.identifier == rhs.identifier
-    }
-    
-    private let identifier = UUID()
-}
-
-class CategoreySection: Hashable {
-    
-    var sectionTitle: String = "Categories"
-    
-    var categories: [List]?
-    
-    init(categories: [List]) {
-        self.categories = categories
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(identifier)
-    }
-    
-    static func == (lhs: CategoreySection, rhs: CategoreySection) -> Bool {
-        return lhs.identifier == rhs.identifier
-    }
-    
-    private let identifier = UUID()
-}
-
 class ListsViewController: BaseViewController {
     
     enum Sections {

@@ -14,9 +14,7 @@ class HomeViewController: BaseViewController {
     }
     
     var listDataSource: UICollectionViewDiffableDataSource<Section<AnyHashable, [AnyHashable]>, AnyHashable>?
-    
     private var flowLayout = ColumnFlowLayout()
-    
     var collectionView: UICollectionView!
     
     override func viewDidLoad() {

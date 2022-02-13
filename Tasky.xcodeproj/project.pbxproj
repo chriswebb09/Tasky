@@ -15,6 +15,10 @@
 		94CB500A27B8F7360025F46C /* TaskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB500927B8F7360025F46C /* TaskyUITests.swift */; };
 		94CB500C27B8F7360025F46C /* TaskyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB500B27B8F7360025F46C /* TaskyUITestsLaunchTests.swift */; };
 		94D7BA3527B975DC00C249EB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3427B975DC00C249EB /* HeaderView.swift */; };
+		94D7BA3727B9852200C249EB /* FavoritesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3627B9852200C249EB /* FavoritesSection.swift */; };
+		94D7BA3927B9854400C249EB /* CategoreySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3827B9854400C249EB /* CategoreySection.swift */; };
+		94D7BA3B27B9855F00C249EB /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3A27B9855F00C249EB /* Section.swift */; };
+		94D7BA3D27B9857E00C249EB /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3C27B9857E00C249EB /* DataSource.swift */; };
 		94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468127B902ED00E46EB9 /* Coordinator.swift */; };
 		94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468327B9030C00E46EB9 /* ApplicationCoordinator.swift */; };
 		94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */; };
@@ -67,6 +71,10 @@
 		94CB500927B8F7360025F46C /* TaskyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskyUITests.swift; sourceTree = "<group>"; };
 		94CB500B27B8F7360025F46C /* TaskyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94D7BA3427B975DC00C249EB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		94D7BA3627B9852200C249EB /* FavoritesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSection.swift; sourceTree = "<group>"; };
+		94D7BA3827B9854400C249EB /* CategoreySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoreySection.swift; sourceTree = "<group>"; };
+		94D7BA3A27B9855F00C249EB /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		94D7BA3C27B9857E00C249EB /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		94D9468127B902ED00E46EB9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		94D9468327B9030C00E46EB9 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
@@ -241,7 +249,11 @@
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94D9469927B90E8C00E46EB9 /* Controllers */,
 				94D946B227B92F0E00E46EB9 /* ListCollectionViewCell.swift */,
+				94D7BA3C27B9857E00C249EB /* DataSource.swift */,
+				94D7BA3827B9854400C249EB /* CategoreySection.swift */,
 				94D7BA3427B975DC00C249EB /* HeaderView.swift */,
+				94D7BA3A27B9855F00C249EB /* Section.swift */,
+				94D7BA3627B9852200C249EB /* FavoritesSection.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -421,12 +433,16 @@
 				94D946A727B9134700E46EB9 /* TabBarViewController.swift in Sources */,
 				94D946AB27B91A0200E46EB9 /* ColumnFlowLayout.swift in Sources */,
 				94D946A127B9122000E46EB9 /* ListsViewController.swift in Sources */,
+				94D7BA3D27B9857E00C249EB /* DataSource.swift in Sources */,
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */,
+				94D7BA3927B9854400C249EB /* CategoreySection.swift in Sources */,
 				94D946A927B9187D00E46EB9 /* List.swift in Sources */,
+				94D7BA3B27B9855F00C249EB /* Section.swift in Sources */,
 				94D946B527B9333600E46EB9 /* Priority.swift in Sources */,
 				94D946AD27B9243200E46EB9 /* NewListViewController.swift in Sources */,
 				94D946B127B9271300E46EB9 /* Tab.swift in Sources */,
+				94D7BA3727B9852200C249EB /* FavoritesSection.swift in Sources */,
 				94D9469C27B9116200E46EB9 /* Setting.swift in Sources */,
 				94D9469727B90E7C00E46EB9 /* TasksViewController.swift in Sources */,
 				94D946A427B9130100E46EB9 /* HomeViewController.swift in Sources */,
