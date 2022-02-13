@@ -19,6 +19,7 @@
 		94D7BA3927B9854400C249EB /* CategoreySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3827B9854400C249EB /* CategoreySection.swift */; };
 		94D7BA3B27B9855F00C249EB /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3A27B9855F00C249EB /* Section.swift */; };
 		94D7BA3D27B9857E00C249EB /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3C27B9857E00C249EB /* DataSource.swift */; };
+		94D7BA4027B986B300C249EB /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3F27B986B300C249EB /* UIHelper.swift */; };
 		94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468127B902ED00E46EB9 /* Coordinator.swift */; };
 		94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468327B9030C00E46EB9 /* ApplicationCoordinator.swift */; };
 		94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */; };
@@ -75,6 +76,7 @@
 		94D7BA3827B9854400C249EB /* CategoreySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoreySection.swift; sourceTree = "<group>"; };
 		94D7BA3A27B9855F00C249EB /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		94D7BA3C27B9857E00C249EB /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		94D7BA3F27B986B300C249EB /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		94D9468127B902ED00E46EB9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		94D9468327B9030C00E46EB9 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94D9469927B90E8C00E46EB9 /* Controllers */,
 				94D7BA3E27B9860600C249EB /* ViewModels */,
+				94D7BA3F27B986B300C249EB /* UIHelper.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */,
 				94D7BA3527B975DC00C249EB /* HeaderView.swift in Sources */,
 				94D9468A27B9067000E46EB9 /* SplashViewController.swift in Sources */,
+				94D7BA4027B986B300C249EB /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

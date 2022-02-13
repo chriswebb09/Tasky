@@ -9,20 +9,14 @@ import UIKit
 
 class ListCollectionViewCell: UICollectionViewCell {
     
-    
     class var reuseId: String {
         return String(describing: self)
     }
-    
-  //  weak var delegate: SettingCellDelegate?
     
     // MARK: UI Properties
     
     var name: UILabel = {
         let settingName = UILabel()
-        //settingName.font = UIFont(name: AppConstants.Font.Name.franklinSemibold, size: AppConstants.Font.Size.setting)
-        //settingName.textColor = UIColor.contentColor
-        //settingName.numberOfLines = AppConstants.UIConstants.LabelLines.fullSize
         settingName.translatesAutoresizingMaskIntoConstraints = false
         return settingName
     }()
@@ -30,8 +24,6 @@ class ListCollectionViewCell: UICollectionViewCell {
     private let arrowImage: UIImageView = {
         let arrowImage = UIImageView()
         arrowImage.translatesAutoresizingMaskIntoConstraints = false
-        //arrowImage.image = UIImage(systemName: AppConstants.ImageAssets.chevronRight)
-        //arrowImage.tintColor = UIColor.contentColor
         arrowImage.contentMode = .scaleAspectFit
         return arrowImage
     }()
@@ -49,12 +41,6 @@ class ListCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        //settingName
     }
 }
 
