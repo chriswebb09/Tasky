@@ -15,7 +15,7 @@ class HeaderView: UICollectionReusableView {
     
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
         titleLabel.textColor = UIColor.primaryColor
         titleLabel.numberOfLines = 0
         titleLabel.translatesAutoresizingMaskIntoConstraints = false

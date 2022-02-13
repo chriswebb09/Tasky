@@ -35,7 +35,9 @@ struct List {
     
     static let list2: [List] = [
         List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
+        List(name: "Test4", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
+        List(name: "Test5", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
+        List(name: "Test6", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
     ]
 }
 
