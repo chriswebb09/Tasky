@@ -19,6 +19,7 @@
 		94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */; };
 		94D9468827B9058200E46EB9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468727B9058100E46EB9 /* Task.swift */; };
 		94D9468A27B9067000E46EB9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468927B9067000E46EB9 /* SplashViewController.swift */; };
+		94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468E27B90AD500E46EB9 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
 		94D9468727B9058100E46EB9 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		94D9468927B9067000E46EB9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		94D9468E27B90AD500E46EB9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,7 @@
 			children = (
 				94CB4FE827B8F7350025F46C /* AppDelegate.swift */,
 				94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */,
-				94D9468927B9067000E46EB9 /* SplashViewController.swift */,
+				94D9469027B90AEC00E46EB9 /* Splash */,
 				94D9468B27B9067700E46EB9 /* Model */,
 				94D9468C27B9067F00E46EB9 /* Extensions */,
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
@@ -138,6 +140,7 @@
 		94D9468B27B9067700E46EB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94D9468E27B90AD500E46EB9 /* AppConstants.swift */,
 				94D9468727B9058100E46EB9 /* Task.swift */,
 			);
 			path = Model;
@@ -158,6 +161,14 @@
 				94D9468127B902ED00E46EB9 /* Coordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		94D9469027B90AEC00E46EB9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				94D9468927B9067000E46EB9 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */,
 				94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */,
+				94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */,
 				94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */,
 				94D9468827B9058200E46EB9 /* Task.swift in Sources */,
 				94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */,
