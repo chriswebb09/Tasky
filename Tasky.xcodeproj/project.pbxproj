@@ -22,6 +22,10 @@
 		94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468E27B90AD500E46EB9 /* AppConstants.swift */; };
 		94D9469227B90CAB00E46EB9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9469127B90CAB00E46EB9 /* DataStorage.swift */; };
 		94D9469427B90CC400E46EB9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9469327B90CC400E46EB9 /* Logger.swift */; };
+		94D9469727B90E7C00E46EB9 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9469627B90E7C00E46EB9 /* TasksViewController.swift */; };
+		94D9469C27B9116200E46EB9 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9469B27B9116200E46EB9 /* Setting.swift */; };
+		94D9469E27B911DD00E46EB9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9469D27B911DD00E46EB9 /* SettingsViewController.swift */; };
+		94D946A127B9122000E46EB9 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946A027B9122000E46EB9 /* ListsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		94D9468E27B90AD500E46EB9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		94D9469127B90CAB00E46EB9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		94D9469327B90CC400E46EB9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		94D9469627B90E7C00E46EB9 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		94D9469B27B9116200E46EB9 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		94D9469D27B911DD00E46EB9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		94D946A027B9122000E46EB9 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +121,10 @@
 			children = (
 				94CB4FE827B8F7350025F46C /* AppDelegate.swift */,
 				94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */,
-				94D9469027B90AEC00E46EB9 /* Splash */,
+				94D9469A27B90EA500E46EB9 /* UI */,
 				94D9468B27B9067700E46EB9 /* Model */,
 				94D9469527B90D8000E46EB9 /* Services */,
 				94D9468C27B9067F00E46EB9 /* Extensions */,
-				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94CB4FF127B8F7360025F46C /* Assets.xcassets */,
 				94CB4FF327B8F7360025F46C /* LaunchScreen.storyboard */,
 				94CB4FF627B8F7360025F46C /* Info.plist */,
@@ -146,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				94D9468E27B90AD500E46EB9 /* AppConstants.swift */,
+				94D9469B27B9116200E46EB9 /* Setting.swift */,
 				94D9468727B9058100E46EB9 /* Task.swift */,
 			);
 			path = Model;
@@ -183,6 +191,50 @@
 				94D9469327B90CC400E46EB9 /* Logger.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		94D9469827B90E8100E46EB9 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				94D9469627B90E7C00E46EB9 /* TasksViewController.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		94D9469927B90E8C00E46EB9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94D9469827B90E8100E46EB9 /* Tasks */,
+				94D9469027B90AEC00E46EB9 /* Splash */,
+				94D9469F27B911E200E46EB9 /* Settings */,
+				94D946A227B9122500E46EB9 /* ListsViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		94D9469A27B90EA500E46EB9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				94D9468D27B9068D00E46EB9 /* Coordinators */,
+				94D9469927B90E8C00E46EB9 /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		94D9469F27B911E200E46EB9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				94D9469D27B911DD00E46EB9 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		94D946A227B9122500E46EB9 /* ListsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				94D946A027B9122000E46EB9 /* ListsViewController.swift */,
+			);
+			path = ListsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,14 +367,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D946A127B9122000E46EB9 /* ListsViewController.swift in Sources */,
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */,
+				94D9469C27B9116200E46EB9 /* Setting.swift in Sources */,
+				94D9469727B90E7C00E46EB9 /* TasksViewController.swift in Sources */,
 				94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */,
 				94D9469227B90CAB00E46EB9 /* DataStorage.swift in Sources */,
 				94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */,
 				94D9469427B90CC400E46EB9 /* Logger.swift in Sources */,
 				94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */,
 				94D9468827B9058200E46EB9 /* Task.swift in Sources */,
+				94D9469E27B911DD00E46EB9 /* SettingsViewController.swift in Sources */,
 				94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */,
 				94D9468A27B9067000E46EB9 /* SplashViewController.swift in Sources */,
 			);
