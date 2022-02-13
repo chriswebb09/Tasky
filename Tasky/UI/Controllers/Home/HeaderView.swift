@@ -15,13 +15,12 @@ class HeaderView: UICollectionReusableView {
     
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        //settingName.font = UIFont(name: AppConstants.Font.Name.franklinSemibold, size: AppConstants.Font.Size.setting)
-        //settingName.textColor = UIColor.contentColor
-        //settingName.numberOfLines = AppConstants.UIConstants.LabelLines.fullSize
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+        titleLabel.textColor = UIColor.primaryColor
+        titleLabel.numberOfLines = 0
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         return titleLabel
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,27 +31,11 @@ class HeaderView: UICollectionReusableView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
-//        updateSettingLabelConstraints()
-//        setupView()
     }
     
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        self.addSubview(titleLabel)
-//        updateSettingLabelConstraints()
-//        setupView()
-//    }
-    
-
     func setupView() {
         titleLabel.textColor = UIColor.customGray
-       // titleLabel.textColor = UIColor.white
-       // titleLabel.adjustsFontForContentSizeCategory = true
-        titleLabel.text = "Header"
     }
-    
     
     private func updateSettingLabelConstraints() {
         NSLayoutConstraint.activate([
@@ -64,14 +47,13 @@ class HeaderView: UICollectionReusableView {
     }
     
     func configureHeader(sectionType: AnyHashable) {
-        //titleLabel.text = "Header"
-//        if let header = sectionType as? MovieSection {
-//            titleLabel.text = header.sectionTitle
-//        }
-//
-//        if let header = sectionType as? CategoreySection {
-//            titleLabel.text = header.sectionTitle
-//        }
+        if let header = sectionType as? FavoritesSection {
+            titleLabel.text = header.sectionTitle
+        }
+        
+        if let header = sectionType as? CategoreySection {
+            titleLabel.text = header.sectionTitle
+        }
     }
     
     

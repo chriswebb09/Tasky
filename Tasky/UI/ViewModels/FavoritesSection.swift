@@ -9,7 +9,7 @@ import Foundation
 
 class FavoritesSection: Hashable {
     
-    var sectionTitle: String = "Popular Movies"
+    var sectionTitle: String = "Favorites"
     
     var media: [List]?
     

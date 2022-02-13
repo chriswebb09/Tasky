@@ -48,11 +48,11 @@ class ListsViewController: BaseViewController {
             cell.layer.shadowOffset = CGSize(width: 1, height: 4.9)
             cell.layer.shadowRadius = 6
         }
-//        listDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) {
-//            collectionView, indexPath, identifier -> UICollectionViewCell in
-//            let list = List.lists[indexPath.row]
-//            return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: list)
-//        }
+        //        listDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) {
+        //            collectionView, indexPath, identifier -> UICollectionViewCell in
+        //            let list = List.lists[indexPath.row]
+        //            return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: list)
+        //        }
     }
     
     func configureSupplementaryView() {
