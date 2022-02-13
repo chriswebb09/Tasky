@@ -148,7 +148,7 @@
 				94CB4FE827B8F7350025F46C /* AppDelegate.swift */,
 				94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */,
 				94D9469A27B90EA500E46EB9 /* UI */,
-				94D9468B27B9067700E46EB9 /* Model */,
+				94D9468B27B9067700E46EB9 /* Models */,
 				94D9469527B90D8000E46EB9 /* Services */,
 				94D9468C27B9067F00E46EB9 /* Extensions */,
 				94CB4FF127B8F7360025F46C /* Assets.xcassets */,
@@ -175,16 +175,27 @@
 			path = TaskyUITests;
 			sourceTree = "<group>";
 		};
-		94D9468B27B9067700E46EB9 /* Model */ = {
+		94D7BA3E27B9860600C249EB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				94D7BA3827B9854400C249EB /* CategoreySection.swift */,
+				94D7BA3627B9852200C249EB /* FavoritesSection.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94D9468B27B9067700E46EB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94D7BA3A27B9855F00C249EB /* Section.swift */,
+				94D7BA3C27B9857E00C249EB /* DataSource.swift */,
 				94D9468E27B90AD500E46EB9 /* AppConstants.swift */,
 				94D9469B27B9116200E46EB9 /* Setting.swift */,
 				94D946B427B9333600E46EB9 /* Priority.swift */,
 				94D9468727B9058100E46EB9 /* Task.swift */,
 				94D946A827B9187D00E46EB9 /* List.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		94D9468C27B9067F00E46EB9 /* Extensions */ = {
@@ -248,12 +259,7 @@
 			children = (
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94D9469927B90E8C00E46EB9 /* Controllers */,
-				94D946B227B92F0E00E46EB9 /* ListCollectionViewCell.swift */,
-				94D7BA3C27B9857E00C249EB /* DataSource.swift */,
-				94D7BA3827B9854400C249EB /* CategoreySection.swift */,
-				94D7BA3427B975DC00C249EB /* HeaderView.swift */,
-				94D7BA3A27B9855F00C249EB /* Section.swift */,
-				94D7BA3627B9852200C249EB /* FavoritesSection.swift */,
+				94D7BA3E27B9860600C249EB /* ViewModels */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 		94D946A527B9130400E46EB9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				94D7BA3427B975DC00C249EB /* HeaderView.swift */,
+				94D946B227B92F0E00E46EB9 /* ListCollectionViewCell.swift */,
 				94D946A327B9130100E46EB9 /* HomeViewController.swift */,
 			);
 			path = Home;
