@@ -7,7 +7,7 @@
 
 import Foundation
 
-actor Task {
+struct Task: Codable {
     var id: String
     var title: String
     var description: String

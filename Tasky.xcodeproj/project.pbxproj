@@ -20,6 +20,8 @@
 		94D9468827B9058200E46EB9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468727B9058100E46EB9 /* Task.swift */; };
 		94D9468A27B9067000E46EB9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468927B9067000E46EB9 /* SplashViewController.swift */; };
 		94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468E27B90AD500E46EB9 /* AppConstants.swift */; };
+		94D9469227B90CAB00E46EB9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9469127B90CAB00E46EB9 /* DataStorage.swift */; };
+		94D9469427B90CC400E46EB9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9469327B90CC400E46EB9 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		94D9468727B9058100E46EB9 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		94D9468927B9067000E46EB9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		94D9468E27B90AD500E46EB9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		94D9469127B90CAB00E46EB9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		94D9469327B90CC400E46EB9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				94CB4FF127B8F7360025F46C /* Assets.xcassets */,
 				94CB4FF327B8F7360025F46C /* LaunchScreen.storyboard */,
 				94CB4FF627B8F7360025F46C /* Info.plist */,
+				94D9469127B90CAB00E46EB9 /* DataStorage.swift */,
+				94D9469327B90CC400E46EB9 /* Logger.swift */,
 			);
 			path = Tasky;
 			sourceTree = "<group>";
@@ -304,7 +310,9 @@
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */,
 				94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */,
+				94D9469227B90CAB00E46EB9 /* DataStorage.swift in Sources */,
 				94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */,
+				94D9469427B90CC400E46EB9 /* Logger.swift in Sources */,
 				94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */,
 				94D9468827B9058200E46EB9 /* Task.swift in Sources */,
 				94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */,

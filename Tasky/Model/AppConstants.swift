@@ -8,5 +8,11 @@
 import UIKit
 
 struct AppConstants {
-    
+    struct Storage {
+        static let tasksPath = "tasks.json"
+        static let firstRunKey = "firstruncomplete"
+        static let imageKey =  "image"
+    }
 }
+
+
