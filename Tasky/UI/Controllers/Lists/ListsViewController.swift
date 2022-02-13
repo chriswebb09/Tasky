@@ -28,6 +28,7 @@ class ListsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Lists"
         self.collectionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: flowLayout)
         self.view.addSubview(collectionView)
         configureCollectionView()

@@ -221,9 +221,9 @@
 				94D9469027B90AEC00E46EB9 /* Splash */,
 				94D9469F27B911E200E46EB9 /* Settings */,
 				94D946A227B9122500E46EB9 /* Lists */,
+				94D946AE27B9243900E46EB9 /* NewList */,
 				94D946A527B9130400E46EB9 /* Home */,
 				94D946AF27B9244400E46EB9 /* TabBar */,
-				94D946AE27B9243900E46EB9 /* NewList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
