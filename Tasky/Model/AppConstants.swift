@@ -49,6 +49,20 @@ struct AppConstants {
         static let checkmark = "checkmark"
         static let rectange = "rectangle.fill"
     }
+    
+    // MARK: - UIConstants
+    
+    struct UIConstants {
+        
+        
+        struct Tabbar {
+            static let xOffset: CGFloat = 30
+            static let yOffset: CGFloat = 10
+            static let widthOffset: CGFloat = 60
+            static let heightOffset: CGFloat = 10
+            static let itemWidth: CGFloat = 50
+        }
+    }
 }
 
 

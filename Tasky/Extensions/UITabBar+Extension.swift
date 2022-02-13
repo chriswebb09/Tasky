@@ -29,7 +29,8 @@ extension UITabBar {
             styledLayer.opacity = 1.0
         }
         styledLayer.masksToBounds = false
-        styledLayer.fillColor = UIColor.customGray.cgColor
+        styledLayer.fillColor = UIColor.white.cgColor
+        //UIColor.customGray.cgColor
         styledLayer.shouldRasterize = true
         styledLayer.rasterizationScale = UIScreen.main.scale
         layer.insertSublayer(styledLayer, at: 0)

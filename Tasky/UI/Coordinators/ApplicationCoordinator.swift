@@ -12,9 +12,13 @@ class ApplicationCoordinator: Coordinator {
     var window: UIWindow
     var rootController: UIViewController!
     
+    private let homeVC = HomeViewController.getHomeVC()
+    private let settingsVC = SettingsViewController.getSettingsVC()
+    private let listsVC = ListsViewController.getListVC()
+    
     init(window: UIWindow) {
         self.window = window
-        self.rootController = SplashViewConroller()
+        rootController = TabBarViewController.makeTabbar(viewControllers: [homeVC, listsVC, settingsVC])
     }
     
     func start() {
