@@ -11,6 +11,20 @@ import UIKit
 
 struct AppConstants {
     
+    struct Constraints {
+        
+        static let zero: CGFloat = 0.0
+        
+        struct SettingCell {
+            static let labelLeading: CGFloat = 30
+            static let labelTrailing: CGFloat = -80
+            static let labelHeight: CGFloat = 40
+            static let imageBackgroundHeight: CGFloat = 60
+            static let arrowTrailing: CGFloat = -25
+            static let arrowHeight: CGFloat = 30
+        }
+    }
+    
     // MARK: - Storage
     
     struct Storage {

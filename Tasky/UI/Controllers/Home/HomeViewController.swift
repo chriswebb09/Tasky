@@ -7,20 +7,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    static let lists: [List] = [
-        List(name: "Test1", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test2", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test4", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
-    ]
+class HomeViewController: BaseViewController {
     
     enum Sections {
         case favorites
     }
     
-    /// - Tag: listDataSource
     private var listDataSource: UICollectionViewDiffableDataSource<Sections, List>!
     private var flowLayout = ColumnFlowLayout()
     
@@ -31,6 +23,7 @@ class HomeViewController: UIViewController {
         self.title = "Home"
         self.collectionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: flowLayout)
         self.view.addSubview(collectionView)
+        collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: ListCollectionViewCell.reuseId)
         configureCollectionView()
     }
     
@@ -38,26 +31,23 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         var snapshot = NSDiffableDataSourceSnapshot<Sections, List>()
         snapshot.appendSections([.favorites])
-        snapshot.appendItems(ListsViewController.lists, toSection:.favorites)
+        snapshot.appendItems(List.lists, toSection:.favorites)
         listDataSource.apply(snapshot, animatingDifferences: true)
     }
     
     func configureCollectionView() {
-        
-        let listCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, List> { cell, indexPath, list in
-            var contentConfiguration = UIListContentConfiguration.subtitleCell()
-            contentConfiguration.text = list.name
-            contentConfiguration.secondaryText = list.id
-            cell.contentConfiguration = contentConfiguration
-            cell.layer.shadowColor = UIColor.black.cgColor
-            cell.layer.shadowOpacity = 0.27
-            cell.layer.shadowOffset = CGSize(width: 1, height: 4.9)
-            cell.layer.shadowRadius = 6
+        let listCellRegistration = UICollectionView.CellRegistration<ListCollectionViewCell, List> { cell, indexPath, list in
+            cell.name.text = list.name
+            cell.contentView.layer.shadowColor = UIColor.black.cgColor
+            cell.contentView.layer.shadowOpacity = 0.27
+            cell.contentView.layer.shadowOffset = CGSize(width: 1, height: 4.9)
+            cell.contentView.layer.shadowRadius = 6
+            cell.contentView.layer.cornerRadius = 10
         }
         
         listDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) {
             collectionView, indexPath, identifier -> UICollectionViewCell in
-            let list = ListsViewController.lists[indexPath.row]
+            let list = List.lists[indexPath.row]
             return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: list)
         }
     }

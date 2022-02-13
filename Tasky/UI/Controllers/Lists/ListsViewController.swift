@@ -7,20 +7,12 @@
 
 import UIKit
 
-class ListsViewController: UIViewController {
-    
-    static let lists: [List] = [
-        List(name: "Test1", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test2", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test4", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
-    ]
-    
+class ListsViewController: BaseViewController {
+
     enum Sections {
         case favorites
     }
     
-    /// - Tag: listDataSource
     private var listDataSource: UICollectionViewDiffableDataSource<Sections, List>!
     private var flowLayout = ColumnFlowLayout()
     
@@ -38,12 +30,11 @@ class ListsViewController: UIViewController {
         super.viewWillAppear(animated)
         var snapshot = NSDiffableDataSourceSnapshot<Sections, List>()
         snapshot.appendSections([.favorites])
-        snapshot.appendItems(ListsViewController.lists, toSection:.favorites)
+        snapshot.appendItems(List.lists, toSection:.favorites)
         listDataSource.apply(snapshot, animatingDifferences: true)
     }
     
     func configureCollectionView() {
-        
         let listCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, List> { cell, indexPath, list in
             var contentConfiguration = UIListContentConfiguration.subtitleCell()
             contentConfiguration.text = list.name
@@ -54,10 +45,9 @@ class ListsViewController: UIViewController {
             cell.layer.shadowOffset = CGSize(width: 1, height: 4.9)
             cell.layer.shadowRadius = 6
         }
-        
         listDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) {
             collectionView, indexPath, identifier -> UICollectionViewCell in
-            let list = ListsViewController.lists[indexPath.row]
+            let list = List.lists[indexPath.row]
             return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: list)
         }
     }

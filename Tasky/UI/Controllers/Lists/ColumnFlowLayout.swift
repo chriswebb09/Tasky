@@ -6,27 +6,27 @@
 //
 
 /*See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Custom view flow layout for single column or multiple columns.
-*/
+ 
+ Abstract:
+ Custom view flow layout for single column or multiple columns.
+ */
 
 import UIKit
 
 class ColumnFlowLayout: UICollectionViewFlowLayout {
-
+    
     private let minColumnWidth: CGFloat = 300.0
-    private let cellHeight: CGFloat = 70.0
+    private let cellHeight: CGFloat = 90.0
     
     private var deletingIndexPaths = [IndexPath]()
     private var insertingIndexPaths = [IndexPath]()
-
+    
     // MARK: Layout Overrides
-
+    
     /// - Tag: ColumnFlowExample
     override func prepare() {
         super.prepare()
-
+        
         guard let collectionView = collectionView else { return }
         
         let availableWidth = collectionView.bounds.inset(by: collectionView.layoutMargins).width
@@ -34,8 +34,10 @@ class ColumnFlowLayout: UICollectionViewFlowLayout {
         let cellWidth = (availableWidth / CGFloat(maxNumColumns)).rounded(.down)
         
         self.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        self.sectionInset = UIEdgeInsets(top: self.minimumInteritemSpacing, left: 0.0, bottom: 0.0, right: 0.0)
+        self.sectionInset = UIEdgeInsets(top: self.minimumInteritemSpacing, left: 0.0, bottom: 10.0, right: 0.0)
         self.sectionInsetReference = .fromSafeArea
+        
+        self.minimumLineSpacing = 20.0
     }
     
     // MARK: Attributes for Updated Items

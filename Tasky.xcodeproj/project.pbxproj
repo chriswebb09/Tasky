@@ -32,6 +32,8 @@
 		94D946AB27B91A0200E46EB9 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946AA27B91A0200E46EB9 /* ColumnFlowLayout.swift */; };
 		94D946AD27B9243200E46EB9 /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946AC27B9243200E46EB9 /* NewListViewController.swift */; };
 		94D946B127B9271300E46EB9 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946B027B9271300E46EB9 /* Tab.swift */; };
+		94D946B327B92F0E00E46EB9 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946B227B92F0E00E46EB9 /* ListCollectionViewCell.swift */; };
+		94D946B527B9333600E46EB9 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946B427B9333600E46EB9 /* Priority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		94D946AA27B91A0200E46EB9 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		94D946AC27B9243200E46EB9 /* NewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		94D946B027B9271300E46EB9 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		94D946B227B92F0E00E46EB9 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		94D946B427B9333600E46EB9 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 			children = (
 				94D9468E27B90AD500E46EB9 /* AppConstants.swift */,
 				94D9469B27B9116200E46EB9 /* Setting.swift */,
+				94D946B427B9333600E46EB9 /* Priority.swift */,
 				94D9468727B9058100E46EB9 /* Task.swift */,
 				94D946A827B9187D00E46EB9 /* List.swift */,
 			);
@@ -233,6 +238,7 @@
 			children = (
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94D9469927B90E8C00E46EB9 /* Controllers */,
+				94D946B227B92F0E00E46EB9 /* ListCollectionViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */,
 				94D946A927B9187D00E46EB9 /* List.swift in Sources */,
+				94D946B527B9333600E46EB9 /* Priority.swift in Sources */,
 				94D946AD27B9243200E46EB9 /* NewListViewController.swift in Sources */,
 				94D946B127B9271300E46EB9 /* Tab.swift in Sources */,
 				94D9469C27B9116200E46EB9 /* Setting.swift in Sources */,
@@ -424,6 +431,7 @@
 				94D9469227B90CAB00E46EB9 /* DataStorage.swift in Sources */,
 				94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */,
 				94D9469427B90CC400E46EB9 /* Logger.swift in Sources */,
+				94D946B327B92F0E00E46EB9 /* ListCollectionViewCell.swift in Sources */,
 				94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */,
 				94D9468827B9058200E46EB9 /* Task.swift in Sources */,
 				94D9469E27B911DD00E46EB9 /* SettingsViewController.swift in Sources */,
