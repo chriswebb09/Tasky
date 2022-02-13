@@ -7,10 +7,68 @@
 
 import UIKit
 
-class ListsViewController: BaseViewController {
+struct Section<T: Hashable, U: Hashable>: Hashable {
+    let headerItem: T
+    let sectionItems: U
+}
 
+struct DataSource<T: Hashable> {
+    let sections: [T]
+}
+
+class FavoritesSection: Hashable {
+    
+    var sectionTitle: String = "Popular Movies"
+    
+    var media: [List]?
+    
+    init(media: [List]) {
+        self.media = media
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
+    
+    static func == (lhs: FavoritesSection, rhs: FavoritesSection) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+    
+    private let identifier = UUID()
+}
+
+class CategoreySection: Hashable {
+    
+    var sectionTitle: String = "Categories"
+    
+    var categories: [List]?
+    
+    init(categories: [List]) {
+        self.categories = categories
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
+    
+    static func == (lhs: CategoreySection, rhs: CategoreySection) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+    
+    private let identifier = UUID()
+}
+
+class ListsViewController: BaseViewController {
+    
     enum Sections {
         case favorites
+        
+        var headerItem: String {
+            switch self {
+            case .favorites:
+                return "Test"
+            }
+        }
     }
     
     private var listDataSource: UICollectionViewDiffableDataSource<Sections, List>!
@@ -20,10 +78,11 @@ class ListsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Lists"
+        //self.title = "Lists"
         self.collectionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: flowLayout)
         self.view.addSubview(collectionView)
         configureCollectionView()
+        configureSupplementaryView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +110,29 @@ class ListsViewController: BaseViewController {
             return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: list)
         }
     }
+    
+    func configureSupplementaryView() {
+        listDataSource?.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+            switch kind {
+            case UICollectionView.elementKindSectionHeader:
+                guard let headerView = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionView.elementKindSectionHeader,
+                    withReuseIdentifier: HeaderView.reuseId,
+                    for: indexPath) as? HeaderView else { return UICollectionReusableView() }
+                headerView.configureHeader(sectionType: (self.listDataSource.snapshot().sectionIdentifiers[indexPath.section].headerItem))
+                return headerView
+            default:
+                print(kind)
+                return UICollectionReusableView()
+//                guard let footerView = collectionView.dequeueReusableSupplementaryView(
+//                    ofKind: UICollectionView.elementKindSectionFooter,
+//                    withReuseIdentifier: FooterView.reuseIdentifier,
+//                    for: indexPath) as? FooterView else { return UICollectionReusableView() }
+//
+//                return footerView
+            }
+        }
+    }
 }
 
 // MARK: - Factory
@@ -58,7 +140,7 @@ class ListsViewController: BaseViewController {
 extension ListsViewController {
     static func getListVC() -> ListsViewController {
         let vc = ListsViewController()
-        let item = UITabBarItem(title: Tab.new.text, image: Tab.new.image, selectedImage: Tab.new.selectedImage)
+        let item = UITabBarItem(title: nil, image: Tab.list.image, selectedImage: Tab.list.selectedImage)
         vc.tabBarItem = item
         return vc
     }

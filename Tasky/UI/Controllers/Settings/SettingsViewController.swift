@@ -12,7 +12,6 @@ class SettingsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.title = "Settings"
     }
 }
 
@@ -21,7 +20,7 @@ class SettingsViewController: BaseViewController {
 extension SettingsViewController {
     static func getSettingsVC() -> SettingsViewController {
         let vc = SettingsViewController()
-        let item = UITabBarItem(title: Tab.settings.text, image: Tab.settings.image, selectedImage: Tab.settings.selectedImage)
+        let item = UITabBarItem(title: nil, image: Tab.settings.image, selectedImage: Tab.settings.selectedImage)
         vc.tabBarItem = item
         return vc
     }

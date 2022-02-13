@@ -12,7 +12,6 @@ class NewListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.title = "New"
     }
 }
 
@@ -21,7 +20,7 @@ class NewListViewController: BaseViewController {
 extension NewListViewController {
     static func getNewListVC() -> NewListViewController {
         let vc = NewListViewController()
-        let item = UITabBarItem(title: Tab.new.text, image: Tab.new.image, selectedImage: Tab.new.selectedImage)
+        let item = UITabBarItem(title: nil, image: Tab.new.image, selectedImage: Tab.new.selectedImage)
         vc.tabBarItem = item
         return vc
     }

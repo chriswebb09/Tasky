@@ -30,18 +30,12 @@ struct List {
     
     static let lists: [List] = [
         List(name: "Test1", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test2", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
+        List(name: "Test2", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
+    ]
+    
+    static let list2: [List] = [
         List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test4", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test5", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test6", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test7", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test8", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test9", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test10", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test11", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test12", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test13", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
+        List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
     ]
 }
 

@@ -66,6 +66,15 @@ struct AppConstants {
         static let chevronRight = "chevron.right"
         static let checkmark = "checkmark"
         static let rectange = "rectangle.fill"
+        static let listBullet = "list.bullet"
+        static let listBulletRectange = "list.bullet.rectangle.portrait"
+        static let listBulletRectangeFilled = "list.bullet.rectangle.portrait.fill"
+        static let statistics = "chart.xyaxis.line"
+        static let person = "person"
+        static let personFilled = "person.fill"
+        static let settings2 = "slider.horizontal.3"
+        static let grid = "square.grid.2x2"
+        static let gridFilled = "square.grid.2x2.fill"
     }
     
     // MARK: - UIConstants

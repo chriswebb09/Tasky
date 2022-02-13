@@ -14,6 +14,7 @@
 		94CB500027B8F7360025F46C /* TaskyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB4FFF27B8F7360025F46C /* TaskyTests.swift */; };
 		94CB500A27B8F7360025F46C /* TaskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB500927B8F7360025F46C /* TaskyUITests.swift */; };
 		94CB500C27B8F7360025F46C /* TaskyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB500B27B8F7360025F46C /* TaskyUITestsLaunchTests.swift */; };
+		94D7BA3527B975DC00C249EB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7BA3427B975DC00C249EB /* HeaderView.swift */; };
 		94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468127B902ED00E46EB9 /* Coordinator.swift */; };
 		94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468327B9030C00E46EB9 /* ApplicationCoordinator.swift */; };
 		94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */; };
@@ -65,6 +66,7 @@
 		94CB500527B8F7360025F46C /* TaskyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB500927B8F7360025F46C /* TaskyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskyUITests.swift; sourceTree = "<group>"; };
 		94CB500B27B8F7360025F46C /* TaskyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		94D7BA3427B975DC00C249EB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		94D9468127B902ED00E46EB9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		94D9468327B9030C00E46EB9 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		94D9468527B903D200E46EB9 /* UITabBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extension.swift"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94D9469927B90E8C00E46EB9 /* Controllers */,
 				94D946B227B92F0E00E46EB9 /* ListCollectionViewCell.swift */,
+				94D7BA3427B975DC00C249EB /* HeaderView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				94D9468827B9058200E46EB9 /* Task.swift in Sources */,
 				94D9469E27B911DD00E46EB9 /* SettingsViewController.swift in Sources */,
 				94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */,
+				94D7BA3527B975DC00C249EB /* HeaderView.swift in Sources */,
 				94D9468A27B9067000E46EB9 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

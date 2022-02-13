@@ -13,12 +13,14 @@ class ApplicationCoordinator: Coordinator {
     var rootController: UIViewController!
     
     private let homeVC = HomeViewController.getHomeVC()
+    private let listVC = ListsViewController.getListVC()
     private let settingsVC = SettingsViewController.getSettingsVC()
-    private let newListVC = NewListViewController.getNewListVC()
+    private let statsVC = TasksViewController.getTaskVC()
+    //private let newListVC = NewListViewController.getNewListVC()
     
     init(window: UIWindow) {
         self.window = window
-        rootController = TabBarViewController.makeTabbar(viewControllers: [homeVC, newListVC, settingsVC])
+        rootController = TabBarViewController.makeTabbar(viewControllers: [homeVC, listVC, statsVC, settingsVC])
     }
     
     func start() {
