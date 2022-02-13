@@ -115,13 +115,12 @@
 				94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */,
 				94D9469027B90AEC00E46EB9 /* Splash */,
 				94D9468B27B9067700E46EB9 /* Model */,
+				94D9469527B90D8000E46EB9 /* Services */,
 				94D9468C27B9067F00E46EB9 /* Extensions */,
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94CB4FF127B8F7360025F46C /* Assets.xcassets */,
 				94CB4FF327B8F7360025F46C /* LaunchScreen.storyboard */,
 				94CB4FF627B8F7360025F46C /* Info.plist */,
-				94D9469127B90CAB00E46EB9 /* DataStorage.swift */,
-				94D9469327B90CC400E46EB9 /* Logger.swift */,
 			);
 			path = Tasky;
 			sourceTree = "<group>";
@@ -175,6 +174,15 @@
 				94D9468927B9067000E46EB9 /* SplashViewController.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		94D9469527B90D8000E46EB9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				94D9469127B90CAB00E46EB9 /* DataStorage.swift */,
+				94D9469327B90CC400E46EB9 /* Logger.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
