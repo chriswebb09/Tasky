@@ -64,21 +64,12 @@ class ListsViewController: BaseViewController {
         listDataSource?.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
             switch kind {
             case UICollectionView.elementKindSectionHeader:
-                guard let headerView = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: UICollectionView.elementKindSectionHeader,
-                    withReuseIdentifier: HeaderView.reuseId,
-                    for: indexPath) as? HeaderView else { return UICollectionReusableView() }
-                headerView.configureHeader(sectionType: (self.listDataSource.snapshot().sectionIdentifiers[indexPath.section].headerItem))
+                guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.reuseId, for: indexPath) as? HeaderView else { return UICollectionReusableView() }
+                headerView.configureHeader(sectionType: (self.listDataSource?.snapshot().sectionIdentifiers[indexPath.section].headerItem)!)
                 return headerView
             default:
-                print(kind)
-                return UICollectionReusableView()
-//                guard let footerView = collectionView.dequeueReusableSupplementaryView(
-//                    ofKind: UICollectionView.elementKindSectionFooter,
-//                    withReuseIdentifier: FooterView.reuseIdentifier,
-//                    for: indexPath) as? FooterView else { return UICollectionReusableView() }
-//
-//                return footerView
+                guard let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: HeaderView.reuseId, for: indexPath) as? HeaderView else { return UICollectionReusableView() }
+                return footerView
             }
         }
     }
