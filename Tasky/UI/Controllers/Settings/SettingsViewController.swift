@@ -20,7 +20,7 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController {
     static func getSettingsVC() -> SettingsViewController {
         let vc = SettingsViewController()
-        let item = UITabBarItem(title: nil, image: Tab.news.image, selectedImage: Tab.news.selectedImage)
+        let item = UITabBarItem(title: nil, image: Tab.settings.image, selectedImage: Tab.settings.selectedImage)
         vc.tabBarItem = item
         return vc
     }

@@ -9,16 +9,16 @@ import UIKit
 
 enum Tab {
     
-    case news
-    case boomarks
+    case home
+    case lists
     case settings
     
     var image: UIImage? {
         switch self {
-        case .news:
-            return UIImage(systemName: AppConstants.ImageAssets.newspaper)
-        case .boomarks:
-            return UIImage(systemName: AppConstants.ImageAssets.bookmark)
+        case .home:
+            return UIImage(systemName: AppConstants.ImageAssets.home)
+        case .lists:
+            return UIImage(systemName: AppConstants.ImageAssets.favorite)
         case .settings:
             return UIImage(systemName: AppConstants.ImageAssets.settings)
         }
@@ -26,10 +26,10 @@ enum Tab {
     
     var selectedImage: UIImage? {
         switch self {
-        case .news:
-            return UIImage(systemName: AppConstants.ImageAssets.newspaperFilled)
-        case .boomarks:
-            return UIImage(systemName: AppConstants.ImageAssets.bookmarkFilled)
+        case .home:
+            return UIImage(systemName: AppConstants.ImageAssets.homeFilled)
+        case .lists:
+            return UIImage(systemName: AppConstants.ImageAssets.favoriteFilled)
         case .settings:
             return UIImage(systemName: AppConstants.ImageAssets.settingsFilled)
         }

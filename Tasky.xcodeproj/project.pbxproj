@@ -28,6 +28,8 @@
 		94D946A127B9122000E46EB9 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946A027B9122000E46EB9 /* ListsViewController.swift */; };
 		94D946A427B9130100E46EB9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946A327B9130100E46EB9 /* HomeViewController.swift */; };
 		94D946A727B9134700E46EB9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946A627B9134700E46EB9 /* TabBarViewController.swift */; };
+		94D946A927B9187D00E46EB9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946A827B9187D00E46EB9 /* List.swift */; };
+		94D946AB27B91A0200E46EB9 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D946AA27B91A0200E46EB9 /* ColumnFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		94D946A027B9122000E46EB9 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		94D946A327B9130100E46EB9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94D946A627B9134700E46EB9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		94D946A827B9187D00E46EB9 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		94D946AA27B91A0200E46EB9 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 				94D9468E27B90AD500E46EB9 /* AppConstants.swift */,
 				94D9469B27B9116200E46EB9 /* Setting.swift */,
 				94D9468727B9058100E46EB9 /* Task.swift */,
+				94D946A827B9187D00E46EB9 /* List.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				94D946A027B9122000E46EB9 /* ListsViewController.swift */,
+				94D946AA27B91A0200E46EB9 /* ColumnFlowLayout.swift */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -382,9 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D946A727B9134700E46EB9 /* TabBarViewController.swift in Sources */,
+				94D946AB27B91A0200E46EB9 /* ColumnFlowLayout.swift in Sources */,
 				94D946A127B9122000E46EB9 /* ListsViewController.swift in Sources */,
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				94D9468627B903D200E46EB9 /* UITabBar+Extension.swift in Sources */,
+				94D946A927B9187D00E46EB9 /* List.swift in Sources */,
 				94D9469C27B9116200E46EB9 /* Setting.swift in Sources */,
 				94D9469727B90E7C00E46EB9 /* TasksViewController.swift in Sources */,
 				94D946A427B9130100E46EB9 /* HomeViewController.swift in Sources */,
