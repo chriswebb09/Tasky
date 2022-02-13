@@ -12,16 +12,16 @@ class ListsViewController: UIViewController {
     static let lists: [List] = [
         List(name: "Test1", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
         List(name: "Test2", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
-        List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
+        List(name: "Test3", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date()),
+        List(name: "Test4", tasks: [], dateCreated: Date(), id: UUID().uuidString, lastUpdated: Date())
     ]
     
     enum Sections {
         case favorites
     }
     
-    /// - Tag: recipeListDataSource
+    /// - Tag: listDataSource
     private var listDataSource: UICollectionViewDiffableDataSource<Sections, List>!
-
     private var flowLayout = ColumnFlowLayout()
     
     var collectionView: UICollectionView!
@@ -48,6 +48,10 @@ class ListsViewController: UIViewController {
             contentConfiguration.text = list.name
             contentConfiguration.secondaryText = list.id
             cell.contentConfiguration = contentConfiguration
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.27
+            cell.layer.shadowOffset = CGSize(width: 1, height: 4.9)
+            cell.layer.shadowRadius = 6
         }
         
         listDataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) {
