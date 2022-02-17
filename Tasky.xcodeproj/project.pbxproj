@@ -220,10 +220,8 @@
 		946A2D5C27BE87C200498AA2 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				946A2D5A27BE879600498AA2 /* SignupViewController.swift */,
-				94B4CE3F27BED7E8005D3C01 /* SignUpViewControllerDelegate.swift */,
-				943093D927BEA1E8001C0279 /* SignupView.swift */,
-				94B4CE4127BED7FE005D3C01 /* SignupViewDelegate.swift */,
+				94B4CE4627BED8A8005D3C01 /* Controller */,
+				94B4CE4727BED8B1005D3C01 /* View */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -240,10 +238,8 @@
 		94B4CE2F27BEB477005D3C01 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				94B4CE2D27BEB467005D3C01 /* WelcomeViewController.swift */,
-				94B4CE3D27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift */,
-				94B4CE3B27BED7AC005D3C01 /* WelcomeViewDelegate.swift */,
-				94B4CE3927BED790005D3C01 /* WelcomeView.swift */,
+				94B4CE4427BED898005D3C01 /* Controller */,
+				94B4CE4527BED8A1005D3C01 /* View */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -257,6 +253,52 @@
 				94B4CE3427BED6D4005D3C01 /* H2TextView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		94B4CE4327BED874005D3C01 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				94B4CE3827BED719005D3C01 /* SwiftUI */,
+				94CF568527BDD83C00500E7A /* Toast.swift */,
+				9454401327BDB58200F30858 /* LoadingIndicatorViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		94B4CE4427BED898005D3C01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94B4CE2D27BEB467005D3C01 /* WelcomeViewController.swift */,
+				94B4CE3D27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94B4CE4527BED8A1005D3C01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94B4CE3B27BED7AC005D3C01 /* WelcomeViewDelegate.swift */,
+				94B4CE3927BED790005D3C01 /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94B4CE4627BED8A8005D3C01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				946A2D5A27BE879600498AA2 /* SignupViewController.swift */,
+				94B4CE3F27BED7E8005D3C01 /* SignUpViewControllerDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94B4CE4727BED8B1005D3C01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				943093D927BEA1E8001C0279 /* SignupView.swift */,
+				94B4CE4127BED7FE005D3C01 /* SignupViewDelegate.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		94CB4FDC27B8F7350025F46C = {
@@ -427,9 +469,7 @@
 			children = (
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94D9469927B90E8C00E46EB9 /* Controllers */,
-				94B4CE3827BED719005D3C01 /* SwiftUI */,
-				94CF568527BDD83C00500E7A /* Toast.swift */,
-				9454401327BDB58200F30858 /* LoadingIndicatorViewController.swift */,
+				94B4CE4327BED874005D3C01 /* Components */,
 				94D7BA3F27B986B300C249EB /* UIHelper.swift */,
 			);
 			path = UI;
