@@ -32,6 +32,9 @@
 		94B4CE3327BED69B005D3C01 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3227BED69A005D3C01 /* KeychainHelper.swift */; };
 		94B4CE3527BED6D4005D3C01 /* H2TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3427BED6D4005D3C01 /* H2TextView.swift */; };
 		94B4CE3727BED6F6005D3C01 /* SubheaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3627BED6F6005D3C01 /* SubheaderTextView.swift */; };
+		94B4CE3A27BED790005D3C01 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3927BED790005D3C01 /* WelcomeView.swift */; };
+		94B4CE3C27BED7AC005D3C01 /* WelcomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3B27BED7AC005D3C01 /* WelcomeViewDelegate.swift */; };
+		94B4CE3E27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3D27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift */; };
 		94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB4FE827B8F7350025F46C /* AppDelegate.swift */; };
 		94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */; };
 		94CB4FF227B8F7360025F46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CB4FF127B8F7360025F46C /* Assets.xcassets */; };
@@ -109,6 +112,9 @@
 		94B4CE3227BED69A005D3C01 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		94B4CE3427BED6D4005D3C01 /* H2TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2TextView.swift; sourceTree = "<group>"; };
 		94B4CE3627BED6F6005D3C01 /* SubheaderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubheaderTextView.swift; sourceTree = "<group>"; };
+		94B4CE3927BED790005D3C01 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		94B4CE3B27BED7AC005D3C01 /* WelcomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewDelegate.swift; sourceTree = "<group>"; };
+		94B4CE3D27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		94CB4FE527B8F7350025F46C /* Tasky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB4FE827B8F7350025F46C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +235,9 @@
 			isa = PBXGroup;
 			children = (
 				94B4CE2D27BEB467005D3C01 /* WelcomeViewController.swift */,
+				94B4CE3D27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift */,
+				94B4CE3B27BED7AC005D3C01 /* WelcomeViewDelegate.swift */,
+				94B4CE3927BED790005D3C01 /* WelcomeView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -614,6 +623,7 @@
 				94D946AB27B91A0200E46EB9 /* ColumnFlowLayout.swift in Sources */,
 				94D946A127B9122000E46EB9 /* ListsViewController.swift in Sources */,
 				94D7BA3D27B9857E00C249EB /* DataSource.swift in Sources */,
+				94B4CE3A27BED790005D3C01 /* WelcomeView.swift in Sources */,
 				9454401827BDBC5100F30858 /* UITextField+Extension.swift in Sources */,
 				94D9468427B9030C00E46EB9 /* ApplicationCoordinator.swift in Sources */,
 				9454401127BDB1D200F30858 /* LoginViewController.swift in Sources */,
@@ -636,6 +646,7 @@
 				94D9469C27B9116200E46EB9 /* Setting.swift in Sources */,
 				94D9469727B90E7C00E46EB9 /* TasksViewController.swift in Sources */,
 				94D946A427B9130100E46EB9 /* HomeViewController.swift in Sources */,
+				94B4CE3C27BED7AC005D3C01 /* WelcomeViewDelegate.swift in Sources */,
 				94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */,
 				94CF568E27BDD89E00500E7A /* AuthenticationService.swift in Sources */,
 				94B4CE2E27BEB467005D3C01 /* WelcomeViewController.swift in Sources */,
@@ -645,6 +656,7 @@
 				94D946B327B92F0E00E46EB9 /* ListCollectionViewCell.swift in Sources */,
 				94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */,
 				94CF568627BDD83C00500E7A /* Toast.swift in Sources */,
+				94B4CE3E27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift in Sources */,
 				94D9468827B9058200E46EB9 /* Task.swift in Sources */,
 				946A2D6527BEA01200498AA2 /* SplashViewConrollerDelegate.swift in Sources */,
 				94D9469E27B911DD00E46EB9 /* SettingsViewController.swift in Sources */,

@@ -30,11 +30,7 @@ extension Tag: Hashable {
     }
 }
 
-class ListTag: Tag {
-    
-}
+class ListTag: Tag { }
 
 
-class TaskTag: Tag {
-    
-}
+class TaskTag: Tag { }
