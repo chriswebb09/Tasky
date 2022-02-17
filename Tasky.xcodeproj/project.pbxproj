@@ -29,6 +29,9 @@
 		946A2D6527BEA01200498AA2 /* SplashViewConrollerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A2D6427BEA01200498AA2 /* SplashViewConrollerDelegate.swift */; };
 		94B4CE2E27BEB467005D3C01 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE2D27BEB467005D3C01 /* WelcomeViewController.swift */; };
 		94B4CE3127BEC74F005D3C01 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3027BEC74F005D3C01 /* Tag.swift */; };
+		94B4CE3327BED69B005D3C01 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3227BED69A005D3C01 /* KeychainHelper.swift */; };
+		94B4CE3527BED6D4005D3C01 /* H2TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3427BED6D4005D3C01 /* H2TextView.swift */; };
+		94B4CE3727BED6F6005D3C01 /* SubheaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3627BED6F6005D3C01 /* SubheaderTextView.swift */; };
 		94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB4FE827B8F7350025F46C /* AppDelegate.swift */; };
 		94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */; };
 		94CB4FF227B8F7360025F46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CB4FF127B8F7360025F46C /* Assets.xcassets */; };
@@ -38,7 +41,7 @@
 		94CB500C27B8F7360025F46C /* TaskyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB500B27B8F7360025F46C /* TaskyUITestsLaunchTests.swift */; };
 		94CF568627BDD83C00500E7A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF568527BDD83C00500E7A /* Toast.swift */; };
 		94CF568827BDD85600500E7A /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF568727BDD85600500E7A /* LoginViewDelegate.swift */; };
-		94CF568A27BDD86B00500E7A /* WelcomeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF568927BDD86B00500E7A /* WelcomeText.swift */; };
+		94CF568A27BDD86B00500E7A /* HeaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF568927BDD86B00500E7A /* HeaderTextView.swift */; };
 		94CF568C27BDD88500500E7A /* LoginButtonContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF568B27BDD88500500E7A /* LoginButtonContent.swift */; };
 		94CF568E27BDD89E00500E7A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF568D27BDD89E00500E7A /* AuthenticationService.swift */; };
 		94CF569027BDD8DE00500E7A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF568F27BDD8DE00500E7A /* LoginView.swift */; };
@@ -103,6 +106,9 @@
 		946A2D6427BEA01200498AA2 /* SplashViewConrollerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewConrollerDelegate.swift; sourceTree = "<group>"; };
 		94B4CE2D27BEB467005D3C01 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		94B4CE3027BEC74F005D3C01 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		94B4CE3227BED69A005D3C01 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		94B4CE3427BED6D4005D3C01 /* H2TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2TextView.swift; sourceTree = "<group>"; };
+		94B4CE3627BED6F6005D3C01 /* SubheaderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubheaderTextView.swift; sourceTree = "<group>"; };
 		94CB4FE527B8F7350025F46C /* Tasky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB4FE827B8F7350025F46C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +122,7 @@
 		94CB500B27B8F7360025F46C /* TaskyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94CF568527BDD83C00500E7A /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		94CF568727BDD85600500E7A /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
-		94CF568927BDD86B00500E7A /* WelcomeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeText.swift; sourceTree = "<group>"; };
+		94CF568927BDD86B00500E7A /* HeaderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTextView.swift; sourceTree = "<group>"; };
 		94CF568B27BDD88500500E7A /* LoginButtonContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonContent.swift; sourceTree = "<group>"; };
 		94CF568D27BDD89E00500E7A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		94CF568F27BDD8DE00500E7A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -225,6 +231,17 @@
 				94B4CE2D27BEB467005D3C01 /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		94B4CE3827BED719005D3C01 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				94CF568B27BDD88500500E7A /* LoginButtonContent.swift */,
+				94CF568927BDD86B00500E7A /* HeaderTextView.swift */,
+				94B4CE3627BED6F6005D3C01 /* SubheaderTextView.swift */,
+				94B4CE3427BED6D4005D3C01 /* H2TextView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		94CB4FDC27B8F7350025F46C = {
@@ -358,6 +375,7 @@
 			children = (
 				94D9469127B90CAB00E46EB9 /* DataStorage.swift */,
 				94CF568D27BDD89E00500E7A /* AuthenticationService.swift */,
+				94B4CE3227BED69A005D3C01 /* KeychainHelper.swift */,
 				94D9469327B90CC400E46EB9 /* Logger.swift */,
 			);
 			path = Services;
@@ -394,9 +412,8 @@
 			children = (
 				94D9468D27B9068D00E46EB9 /* Coordinators */,
 				94D9469927B90E8C00E46EB9 /* Controllers */,
+				94B4CE3827BED719005D3C01 /* SwiftUI */,
 				94CF568527BDD83C00500E7A /* Toast.swift */,
-				94CF568B27BDD88500500E7A /* LoginButtonContent.swift */,
-				94CF568927BDD86B00500E7A /* WelcomeText.swift */,
 				9454401327BDB58200F30858 /* LoadingIndicatorViewController.swift */,
 				94D7BA3F27B986B300C249EB /* UIHelper.swift */,
 			);
@@ -607,10 +624,12 @@
 				94D946A927B9187D00E46EB9 /* List.swift in Sources */,
 				94D7BA3B27B9855F00C249EB /* Section.swift in Sources */,
 				946A2D6127BE9F9900498AA2 /* SplashViewDelegate.swift in Sources */,
+				94B4CE3527BED6D4005D3C01 /* H2TextView.swift in Sources */,
 				94D946B527B9333600E46EB9 /* Priority.swift in Sources */,
 				94D946AD27B9243200E46EB9 /* NewListViewController.swift in Sources */,
 				94D946B127B9271300E46EB9 /* Tab.swift in Sources */,
 				9454401A27BDBC8600F30858 /* UIColor + Extension.swift in Sources */,
+				94B4CE3727BED6F6005D3C01 /* SubheaderTextView.swift in Sources */,
 				94D7BA3727B9852200C249EB /* TagsSection.swift in Sources */,
 				9454403E27BDC64300F30858 /* UIViewController+Extension.swift in Sources */,
 				943093DA27BEA1E8001C0279 /* SignupView.swift in Sources */,
@@ -633,9 +652,10 @@
 				94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */,
 				94D7BA3527B975DC00C249EB /* HeaderView.swift in Sources */,
 				946A2D5B27BE879600498AA2 /* SignupViewController.swift in Sources */,
-				94CF568A27BDD86B00500E7A /* WelcomeText.swift in Sources */,
+				94CF568A27BDD86B00500E7A /* HeaderTextView.swift in Sources */,
 				94CF569427BDF4DB00500E7A /* FloatingButton.swift in Sources */,
 				94D9468A27B9067000E46EB9 /* SplashViewController.swift in Sources */,
+				94B4CE3327BED69B005D3C01 /* KeychainHelper.swift in Sources */,
 				94CF569027BDD8DE00500E7A /* LoginView.swift in Sources */,
 				94D7BA4027B986B300C249EB /* UIHelper.swift in Sources */,
 			);
