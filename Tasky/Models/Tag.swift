@@ -22,7 +22,7 @@ class Tag: Codable {
 extension Tag: Hashable {
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id + subject)
+        hasher.combine(subject)
     }
     
     static func == (lhs: Tag, rhs: Tag) -> Bool {

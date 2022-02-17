@@ -19,6 +19,7 @@ class WelcomeViewController: UIViewController {
         configuration.delegate = self
         let welcome = WelcomeView(configuration: configuration)
         addSubSwiftUIView(welcome, to: self.view)
+        self.view.backgroundColor = .white
     }
 }
 

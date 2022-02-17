@@ -21,6 +21,7 @@ struct LoginView : View {
             VStack(alignment: .leading, spacing: 8) {
                 VStack(alignment: .leading) {
                     HeaderText(headerText: "Sign In")
+                        .background(.white)
                         .padding(.bottom, 5)
                     SubheaderText(subheaderText: "Sign in to continue")
                 }
@@ -29,10 +30,10 @@ struct LoginView : View {
                     CustomTextField(placeHolder: "Email", value: $email, lineColor: .gray, width: 2)
                         .padding(.bottom, 50)
                     CustomSecureTextField(placeHolder: "Password", value: $password, lineColor: .gray, width: 2)
-                }
+                }.ignoresSafeArea(.keyboard, edges: .bottom)
                 .offset(y: -50)
             }
-            .offset(y: -60)
+            .offset(y: -70)
             
             VStack {
                 Button(action: {
@@ -43,6 +44,7 @@ struct LoginView : View {
             }.offset(y: -10)
             
         }
+        .ignoresSafeArea(.keyboard, edges: .bottom)
         .padding(.leading, 20)
         .padding(.trailing, 20)
     }

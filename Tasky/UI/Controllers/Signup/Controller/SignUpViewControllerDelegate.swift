@@ -9,4 +9,5 @@ import Foundation
 
 protocol SignUpViewControllerDelegate: AnyObject {
     func signupTapped(email: String, password: String)
+    func signupViewControllerDismissed() 
 }

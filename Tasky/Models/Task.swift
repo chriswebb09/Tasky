@@ -47,9 +47,7 @@ struct Task: Codable {
         self.tag = try values.decode(TaskTag.self, forKey: .tag)
     }
     
-    func encode(to encoder: Encoder) throws {
-        
-    }
+    func encode(to encoder: Encoder) throws { }
     
     
     static let tasks: [Task] = [

@@ -18,7 +18,9 @@ struct SignupView : View {
             VStack(alignment: .leading, spacing: 8) {
                 VStack(alignment: .leading) {
                     HeaderText(headerText: "Sign Up")
+                        .background(.white)
                         .padding(.bottom, 5)
+                    
                     SubheaderText(subheaderText: "Create your new account.")
                 }
                 .offset(y: -60)
@@ -26,7 +28,7 @@ struct SignupView : View {
                     CustomTextField(placeHolder: "Email", value: $email, lineColor: .gray, width: 2)
                         .padding(.bottom, 40)
                     CustomSecureTextField(placeHolder: "Password", value: $password, lineColor: .gray, width: 2)
-                }
+                }.ignoresSafeArea(.keyboard, edges: .bottom)
                 .offset(y: -50)
             }
             .offset(y: -60)

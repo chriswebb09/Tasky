@@ -43,6 +43,7 @@ class HomeViewController: BaseViewController {
     func getData() {
         var sections: [Section<AnyHashable, [AnyHashable]>] = []
         var tags = List.lists.map { $0.tag }
+        
         tags.append(contentsOf: List.list2.map { $0.tag })
         tags = Array(Set(tags)).uniqued()
         sections.append(Section(headerItem: TagsSection(media: tags),sectionItems: tags))

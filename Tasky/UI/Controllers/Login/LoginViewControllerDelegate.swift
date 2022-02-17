@@ -9,6 +9,7 @@ import Foundation
 
 protocol LoginViewControllerDelegate: AnyObject {
     func loginTapped(email: String, password: String)
+    func loginViewControllerDismissed()
 }
 
 

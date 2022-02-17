@@ -23,6 +23,8 @@ class ApplicationCoordinator: Coordinator {
     private let signupVC: SignUpViewController! = SignUpViewController()
     private let splashVC = SplashViewConroller()
     private let welcomeVC = WelcomeViewController()
+    
+    
     init(window: UIWindow) {
         self.window = window
         splashVC.delegate = self
@@ -51,7 +53,7 @@ class ApplicationCoordinator: Coordinator {
         button.layer.shadowOffset = CGSize(width: 1, height: 4.9)
         button.layer.shadowRadius = 6
         button.addTarget(self, action: #selector(newTask), for: .touchUpInside)
-        let backgroundView = UIView(frame: CGRect(x: 285, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height * 0.13), width: 100, height: 100))
+        let backgroundView = UIView(frame: CGRect(x: 285, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height * 0.14), width: 100, height: 100))
         backgroundView.backgroundColor = .clear
         backgroundView.addSubview(button)
         window.addSubview(backgroundView)
@@ -61,12 +63,9 @@ class ApplicationCoordinator: Coordinator {
 extension ApplicationCoordinator {
     
     func setTabbar() {
-        self.rootController = UINavigationController(rootViewController: self.homeVC)
-        self.window.rootViewController = self.rootController
-        
-        // add animation
-        UIView.transition(with: self.window, duration: 0.25, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
-        
+        rootController = UINavigationController(rootViewController: homeVC)
+        window.rootViewController = self.rootController
+        UIView.transition(with: window, duration: 0.25, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
         self.floatingButton()
     }
     
@@ -87,10 +86,10 @@ extension ApplicationCoordinator: SplashViewConrollerDelegate {
                 }
             }
         } else {
-            self.welcomeVC.delegate = self
-            self.signupVC.delegate = self
-            self.loginVC.delegate = self
-            self.rootController = self.welcomeVC
+            welcomeVC.delegate = self
+            signupVC.delegate = self
+            loginVC.delegate = self
+            rootController = self.welcomeVC
             DispatchQueue.main.async {
                 self.window.rootViewController = self.rootController
                 UIView.transition(with: self.window, duration: 0.25, options: [.transitionCrossDissolve], animations: nil, completion: nil)
@@ -102,12 +101,22 @@ extension ApplicationCoordinator: SplashViewConrollerDelegate {
 extension ApplicationCoordinator: WelcomeViewControllerDelegate {
     func signupTapped() {
         DispatchQueue.main.async {
+            let view = UIView(frame: self.welcomeVC.view.frame)
+            view.backgroundColor = .white
+            self.welcomeVC.view.addSubview(view)
+            self.welcomeVC.view.bringSubviewToFront(view)
+            self.signupVC.isModalInPresentation = true
             self.rootController.present(self.signupVC, animated: true, completion: nil)
         }
     }
     
     func loginTapped() {
         DispatchQueue.main.async {
+            let view = UIView(frame: self.welcomeVC.view.frame)
+            view.backgroundColor = .white
+            self.welcomeVC.view.addSubview(view)
+            self.welcomeVC.view.bringSubviewToFront(view)
+            self.loginVC.isModalInPresentation = true
             self.rootController.present(self.loginVC, animated: true, completion: nil)
         }
     }
@@ -118,14 +127,19 @@ extension ApplicationCoordinator: LoginViewControllerDelegate {
     func loginTapped(email: String, password: String) {
         AuthenticationService.signIn(email: email, password: password) { authData in
             DispatchQueue.main.async {
-                self.rootController = TabBarViewController.makeTabbar(viewControllers: [self.homeVC, self.listVC, self.statsVC, self.settingsVC])
+                let navVC = UINavigationController(rootViewController: self.homeVC)
+                self.rootController = self.homeVC
                 self.window.rootViewController = self.rootController
-                
-                // add animation
                 UIView.transition(with: self.window, duration: 0.25, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
-                
                 self.floatingButton()
             }
+        }
+    }
+    
+    func signupViewControllerDismissed() {
+        DispatchQueue.main.async {
+            print(self.welcomeVC.view.subviews)
+            self.welcomeVC.view.subviews.last?.removeFromSuperview()
         }
     }
 }
@@ -138,8 +152,14 @@ extension ApplicationCoordinator: SignUpViewControllerDelegate {
             self.window.rootViewController = self.rootController
             // add animation
             UIView.transition(with: self.window, duration: 0.25, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
-            
             self.floatingButton()
+        }
+    }
+    
+    func loginViewControllerDismissed() {
+        DispatchQueue.main.async {
+            print(self.welcomeVC.view.subviews)
+            self.welcomeVC.view.subviews.last?.removeFromSuperview()
         }
     }
 }
