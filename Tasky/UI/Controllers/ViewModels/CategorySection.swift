@@ -1,5 +1,5 @@
 //
-//  CategoreySection.swift
+//  CategorySection.swift
 //  Tasky
 //
 //  Created by Christopher Webb on 2/13/22.
@@ -7,21 +7,21 @@
 
 import Foundation
 
-class CategoreySection: Hashable {
+class TasksDueSection: Hashable {
     
-    var sectionTitle: String = "Categories"
+    var sectionTitle: String = "Tasks Due Soon"
     
-    var categories: [List]?
+    var tasks: [Task]?
     
-    init(categories: [List]) {
-        self.categories = categories
+    init(tasks: [Task]) {
+        self.tasks = tasks
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(identifier)
     }
     
-    static func == (lhs: CategoreySection, rhs: CategoreySection) -> Bool {
+    static func == (lhs: TasksDueSection, rhs: TasksDueSection) -> Bool {
         return lhs.identifier == rhs.identifier
     }
     

@@ -18,6 +18,7 @@ class HeaderView: UICollectionReusableView {
         titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
         titleLabel.textColor = UIColor.primaryColor
         titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         return titleLabel
     }()
@@ -39,20 +40,22 @@ class HeaderView: UICollectionReusableView {
     
     private func updateSettingLabelConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: AppConstants.Constraints.SettingCell.labelLeading),
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: AppConstants.Constraints.SettingCell.labelTrailing),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 14),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: AppConstants.Constraints.SettingCell.labelHeight)
         ])
     }
     
     func configureHeader(sectionType: AnyHashable) {
-        if let header = sectionType as? FavoritesSection {
-            titleLabel.text = header.sectionTitle
+        if let header = sectionType as? TagsSection {
+            titleLabel.isHidden = true
+            
         }
         
-        if let header = sectionType as? CategoreySection {
+        if let header = sectionType as? TasksDueSection {
             titleLabel.text = header.sectionTitle
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         }
     }
     

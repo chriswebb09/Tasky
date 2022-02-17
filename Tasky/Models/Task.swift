@@ -15,6 +15,7 @@ struct Task: Codable {
     var description: String
     var dateCreated: Date
     var parentListId: String
+    var tag: TaskTag
     var priorty: Priority = .medium
     
     private enum CodingKeys: String, CodingKey {
@@ -24,14 +25,16 @@ struct Task: Codable {
         case dateCreated
         case parentListId
         case priority
+        case tag
     }
     
-    init(id: String, title: String, description: String, parentListId: String) {
+    init(id: String, title: String, description: String, parentListId: String, tag: TaskTag) {
         self.id = id
         self.title = title
         self.description = description
         self.dateCreated = Date()
         self.parentListId = parentListId
+        self.tag = tag
     }
     
     init(from decoder: Decoder) throws {
@@ -41,6 +44,7 @@ struct Task: Codable {
         self.description = try values.decode(String.self, forKey: .description)
         self.dateCreated = try values.decode(Date.self, forKey: .dateCreated)
         self.parentListId = try values.decode(String.self, forKey: .parentListId)
+        self.tag = try values.decode(TaskTag.self, forKey: .tag)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -48,6 +52,10 @@ struct Task: Codable {
     }
     
     
+    static let tasks: [Task] = [
+        Task(id: UUID().uuidString, title: "Task 1", description: "This is a task", parentListId: List.lists[0].id, tag: TaskTag(subject: "Work", id: UUID().uuidString)),
+        Task(id: UUID().uuidString, title: "Task 2", description: "This is another task", parentListId: List.lists[0].id, tag: TaskTag(subject: "Work", id: UUID().uuidString))
+    ]
 }
 
 // MARK: - Hashable

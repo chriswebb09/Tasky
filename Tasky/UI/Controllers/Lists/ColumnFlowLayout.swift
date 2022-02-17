@@ -40,22 +40,22 @@ class ColumnFlowLayout: UICollectionViewFlowLayout {
         self.minimumLineSpacing = 20.0
     }
     
-    // MARK: Attributes for Updated Items
-    
-    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        guard let attributes = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath) else { return nil }
-        
-        if !deletingIndexPaths.isEmpty {
-            if deletingIndexPaths.contains(itemIndexPath) {
-                
-                attributes.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                attributes.alpha = 0.0
-                attributes.zIndex = 0
-            }
-        }
-        
-        return attributes
-    }
+//    // MARK: Attributes for Updated Items
+//    
+//    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+//        guard let attributes = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath) else { return nil }
+//        
+//        if !deletingIndexPaths.isEmpty {
+//            if deletingIndexPaths.contains(itemIndexPath) {
+//                
+//                attributes.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+//                attributes.alpha = 0.0
+//                attributes.zIndex = 0
+//            }
+//        }
+//        
+//        return attributes
+//    }
     
     override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         guard let attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath) else { return nil }

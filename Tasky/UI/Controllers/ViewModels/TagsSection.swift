@@ -7,13 +7,13 @@
 
 import Foundation
 
-class FavoritesSection: Hashable {
+class TagsSection: Hashable {
     
-    var sectionTitle: String = "Favorites"
+    var sectionTitle: String = "Tags"
     
-    var media: [List]?
+    var media: [Tag]?
     
-    init(media: [List]) {
+    init(media: [Tag]) {
         self.media = media
     }
     
@@ -21,7 +21,7 @@ class FavoritesSection: Hashable {
         hasher.combine(identifier)
     }
     
-    static func == (lhs: FavoritesSection, rhs: FavoritesSection) -> Bool {
+    static func == (lhs: TagsSection, rhs: TagsSection) -> Bool {
         return lhs.identifier == rhs.identifier
     }
     

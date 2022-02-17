@@ -81,6 +81,14 @@ struct AppConstants {
     
     struct UIConstants {
         
+        struct NetworkIndicator {
+            static let xOffset: CGFloat = 50
+            static let yOffset: CGFloat = 350
+            static let width: CGFloat = 100
+            static let height: CGFloat = 100
+            static let cornerRadius: CGFloat = 30
+        }
+        
         
         struct Tabbar {
             static let xOffset: CGFloat = 30

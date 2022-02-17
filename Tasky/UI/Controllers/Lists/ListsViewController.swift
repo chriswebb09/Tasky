@@ -16,7 +16,6 @@ class ListsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.title = "Lists"
         self.collectionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: flowLayout)
         self.view.addSubview(collectionView)
         configureCollectionView()
@@ -26,8 +25,11 @@ class ListsViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var sections: [Section<AnyHashable, [AnyHashable]>] = []
-        sections.append(Section(headerItem: FavoritesSection(media: List.lists),sectionItems: List.lists))
-        sections.append(Section(headerItem: CategoreySection(categories: List.list2), sectionItems: List.list2))
+        var tags = List.lists.map { $0.tag }
+        tags.append(contentsOf: List.list2.map { $0.tag })
+        tags = Array(Set(tags))
+        sections.append(Section(headerItem: TagsSection(media: tags),sectionItems: tags))
+        sections.append(Section(headerItem: TasksDueSection(tasks: Task.tasks), sectionItems: Task.tasks))
         let payloadDatasource = DataSource(sections: sections)
         var snapshot = NSDiffableDataSourceSnapshot<Section<AnyHashable, [AnyHashable]>, AnyHashable>()
         payloadDatasource.sections.forEach {

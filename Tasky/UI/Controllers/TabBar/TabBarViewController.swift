@@ -15,7 +15,8 @@ final class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
-        tabBar.backgroundColor = .clear
+        tabBar.backgroundColor = UIColor.backgroundColor
+            //.clear
     }
     
     func setupTabBarStyle() {
