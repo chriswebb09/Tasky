@@ -34,6 +34,11 @@ class ApplicationCoordinator: Coordinator {
     func start() {
         window.rootViewController = rootController
         window.makeKeyAndVisible()
+        
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
     }
     
     func floatingButton() {

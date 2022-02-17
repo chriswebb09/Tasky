@@ -32,7 +32,7 @@ struct WelcomeView : View {
                 Button(action: {
                     configuration.delegate?.signupTapped()
                 }) {
-                    LoginButtonContent(text: "Sign Up")
+                    SignUpButtonContent(text: "Sign Up")
                 }.padding(.bottom, 20)
             }
             

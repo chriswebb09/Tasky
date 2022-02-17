@@ -11,12 +11,25 @@ struct LoginButtonContent : View {
     var text: String
     var body: some View {
         return Text(text)
-            .font(.system(size: 24, weight: .bold, design: .rounded))
+            .font(.system(size: 24, weight: .regular, design: .serif))
             .foregroundColor(.white)
             .padding()
             .frame(width: 300, height: 60)
             .background(Color.init(uiColor: UIColor.primaryColor))
-            .cornerRadius(15.0)
+            .cornerRadius(20)
+    }
+    
+}
+
+
+struct SignUpButtonContent : View {
+    var text: String
+    var body: some View {
+        return Text(text)
+            .underline()
+            .font(.system(size: 20, weight: .bold, design: .serif))
+            .padding()
     }
 }
+
 

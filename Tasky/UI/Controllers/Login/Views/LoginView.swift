@@ -25,7 +25,7 @@ struct LoginView : View {
                         .padding(.bottom, 5)
                     SubheaderText(subheaderText: "Sign in to continue")
                 }
-                .offset(y: -60)
+                .offset(y: -70)
                 VStack {
                     CustomTextField(placeHolder: "Email", value: $email, lineColor: .gray, width: 2)
                         .padding(.bottom, 50)

@@ -31,7 +31,7 @@ struct SignupView : View {
                 }.ignoresSafeArea(.keyboard, edges: .bottom)
                 .offset(y: -50)
             }
-            .offset(y: -60)
+            .offset(y: -70)
             
             VStack {
                 Button(action: {
