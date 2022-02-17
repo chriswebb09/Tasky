@@ -35,6 +35,8 @@
 		94B4CE3A27BED790005D3C01 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3927BED790005D3C01 /* WelcomeView.swift */; };
 		94B4CE3C27BED7AC005D3C01 /* WelcomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3B27BED7AC005D3C01 /* WelcomeViewDelegate.swift */; };
 		94B4CE3E27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3D27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift */; };
+		94B4CE4027BED7E8005D3C01 /* SignUpViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE3F27BED7E8005D3C01 /* SignUpViewControllerDelegate.swift */; };
+		94B4CE4227BED7FE005D3C01 /* SignupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B4CE4127BED7FE005D3C01 /* SignupViewDelegate.swift */; };
 		94CB4FE927B8F7350025F46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB4FE827B8F7350025F46C /* AppDelegate.swift */; };
 		94CB4FEB27B8F7350025F46C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */; };
 		94CB4FF227B8F7360025F46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CB4FF127B8F7360025F46C /* Assets.xcassets */; };
@@ -115,6 +117,8 @@
 		94B4CE3927BED790005D3C01 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		94B4CE3B27BED7AC005D3C01 /* WelcomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewDelegate.swift; sourceTree = "<group>"; };
 		94B4CE3D27BED7C0005D3C01 /* WelcomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		94B4CE3F27BED7E8005D3C01 /* SignUpViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerDelegate.swift; sourceTree = "<group>"; };
+		94B4CE4127BED7FE005D3C01 /* SignupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewDelegate.swift; sourceTree = "<group>"; };
 		94CB4FE527B8F7350025F46C /* Tasky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB4FE827B8F7350025F46C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CB4FEA27B8F7350025F46C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,7 +221,9 @@
 			isa = PBXGroup;
 			children = (
 				946A2D5A27BE879600498AA2 /* SignupViewController.swift */,
+				94B4CE3F27BED7E8005D3C01 /* SignUpViewControllerDelegate.swift */,
 				943093D927BEA1E8001C0279 /* SignupView.swift */,
+				94B4CE4127BED7FE005D3C01 /* SignupViewDelegate.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -647,8 +653,10 @@
 				94D9469727B90E7C00E46EB9 /* TasksViewController.swift in Sources */,
 				94D946A427B9130100E46EB9 /* HomeViewController.swift in Sources */,
 				94B4CE3C27BED7AC005D3C01 /* WelcomeViewDelegate.swift in Sources */,
+				94B4CE4227BED7FE005D3C01 /* SignupViewDelegate.swift in Sources */,
 				94D9468227B902EE00E46EB9 /* Coordinator.swift in Sources */,
 				94CF568E27BDD89E00500E7A /* AuthenticationService.swift in Sources */,
+				94B4CE4027BED7E8005D3C01 /* SignUpViewControllerDelegate.swift in Sources */,
 				94B4CE2E27BEB467005D3C01 /* WelcomeViewController.swift in Sources */,
 				94D9469227B90CAB00E46EB9 /* DataStorage.swift in Sources */,
 				94D9468F27B90AD600E46EB9 /* AppConstants.swift in Sources */,

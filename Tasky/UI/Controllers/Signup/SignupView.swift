@@ -8,10 +8,6 @@
 import Foundation
 import SwiftUI
 
-protocol SignupViewDelegate: AnyObject {
-    func signupTapped(email: String, password: String)
-}
-
 struct SignupView : View {
     @State var email: String = ""
     @State var password: String = ""

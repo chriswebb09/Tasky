@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol SignUpViewControllerDelegate: AnyObject {
-    func signupTapped(email: String, password: String)
-}
 
 class SignUpViewController: UIViewController {
     weak var delegate: SignUpViewControllerDelegate?
